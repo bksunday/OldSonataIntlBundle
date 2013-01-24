@@ -42,7 +42,7 @@ class RequestDetector implements LocaleDetectorInterface
      */
     public function getLocale()
     {
-	if (isset($this->container->scopedSerivces['request'])) {
+        if (isset($this->container->scopedSerivces['request'])) {
             if ($request = $this->container->get('request', ContainerInterface::NULL_ON_INVALID_REFERENCE)) {
                 return $request->getLocale();
             }
